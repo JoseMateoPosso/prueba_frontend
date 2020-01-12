@@ -1,0 +1,86 @@
+<mat-tab-group Move focus to last tab>
+  <mat-tab label="Empresas"> Content 1 </mat-tab>
+  <mat-tab label="Personas">
+    <h1 class="labelone">Personas</h1>
+
+    <table mat-table [dataSource]="users" class="mat-elevation-z2">
+
+      <ng-container matColumnDef="gender">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let element">
+          <mat-icon *ngIf="element.gender == 'male'" aria-hidden="false" class="male" aria-label="person home icon">
+            person</mat-icon>
+          <mat-icon *ngIf="element.gender == 'female'" aria-hidden="false" class="female" aria-label="person home icon">
+            person</mat-icon>
+            <div class="circle-container">
+              <label for="">
+              {{element.first_name | slice:0:1}} 
+              {{element.last_name | slice:0:1}} 
+              </label>
+            </div>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let element" (click)="viewdUser(element.id)" class="focus-name"> {{element.first_name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="last_name">
+        <th mat-header-cell *matHeaderCellDef> Apellido </th>
+        <td mat-cell *matCellDef="let element" (click)="viewdUser(element.id)" class="focus-name"> {{element.last_name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="website">
+        <th mat-header-cell *matHeaderCellDef> website </th>
+        <td mat-cell *matCellDef=""> </td>
+      </ng-container>
+
+      <ng-container matColumnDef="dob">
+        <th mat-header-cell *matHeaderCellDef> Dob </th>
+        <td mat-cell *matCellDef="let element"> {{element.dob}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="">
+          <mat-icon aria-hidden="false" aria-label="Example home icon">mail</mat-icon>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef> Address </th>
+        <td mat-cell *matCellDef=""> </td>
+      </ng-container>
+
+      <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef> Phone </th>
+        <td mat-cell *matCellDef="">
+          <mat-icon aria-hidden="false" aria-label="Example home icon">phone</mat-icon>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </mat-tab>
+  <mat-tab label="Historial de acceso">
+
+  </mat-tab>
+</mat-tab-group>
+
+
+<!--<p>{{users.result.id}}</p>
+
+<ul *ngIf="users">
+  <li *ngFor="let user of users.result">
+    <p (click)="findUser(user.id)"> {{ user.last_name }}</p>
+  </li>
+</ul>
+
+<p>here</p>
+<mat-list *ngIf="users">
+  <mat-list role="list" *ngFor="let user of users.result">
+    <mat-list-item role="listitem" (click)="findUser(user.id)"> {{ user.last_name }}</mat-list-item>
+  </mat-list>
+</mat-list>-->

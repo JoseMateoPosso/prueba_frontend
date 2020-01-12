@@ -1,0 +1,36 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0463ab;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #c8c8ff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: white;
+}
+
+.active {
+  color: white !important;
+}
+
+
+h1.proyect-tittle {
+  padding: .5em;
+  background-color: #0874c6;
+  margin: 0;
+  color: white;
+  font-weight: 400;
+}

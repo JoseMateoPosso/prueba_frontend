@@ -1,0 +1,70 @@
+table{
+    width: 98%;
+    margin: 1em;
+}
+
+tr.mat-header-row {
+    height: 40px;
+    background-color: #00599c;
+}
+
+th.mat-header-cell {
+    color: white;
+    text-transform: uppercase;
+}
+
+h1.labelone {
+    margin: 3em 0em 0em .7em;
+    font-weight: 400;
+}
+
+.mat-icon {
+    background-repeat: no-repeat;
+    display: inline-block;
+    fill: currentColor;
+    height: 24px;
+    width: 24px;
+    color: gray;
+}
+
+mat-icon.male {
+    color: #3cf361 !important;
+}
+
+mat-icon.female {
+    color: pink !important;
+}
+
+
+mat-ink-bar.mat-ink-bar {
+    background-color: #3cf361 !important;
+}
+
+td.focus-name {
+    cursor: pointer;
+}
+
+.circle-container {
+    webkit-background-size: 32px 32px;
+    background-size: 32px 32px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    height: 32px;
+    width: 32px;
+    z-index: 0;
+    margin-left: 1em;
+    background-color: #f7962a;
+}
+
+label {
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    position: absolute;
+    letter-spacing: -2px;
+    font-weight: 500;
+    color: white;
+}
